@@ -14,7 +14,7 @@ The regex looks like this:
 
 # Table of Contents 
  
- * [Positive Lookahead](Positive Lookahead)
+ * Positive Lookahead
  * Ranges and Character Classes
  * Star and Dot
  * Character Escapes
