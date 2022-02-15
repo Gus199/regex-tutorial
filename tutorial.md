@@ -14,4 +14,30 @@ The regex looks like this:
 
 # Table of Contents 
  
+ * ![Positive Lookahead](Positive Lookahead)
+ * Ranges and Character Classes
+ * Star and Dot
+ * Character Escapes
+ * Quantifiers
+ * Capturing Groups
+ * Examples
+ * Anchors
+ * Author
 
+ # Regex Components
+
+# Positive Lookahead
+* Lookaheads allows to add a condition for “what follows”. This part of an expression will match for a pattern that are followed by another pattern. Any valid regular expression can be used inside the lookahead. A Lookbehind is similar, but it looks behind. That is, it allows to match a pattern only if there’s something before it.
+* Our example uses only positive lookaheads, and checks for numbers (0-9), letters (a-z upper and lowercase), and special characters.
+* How a lookahead is written out: ``` ?=```
+* Examples in our regex: ```(?=(.*[0-9])) / (?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,.?]) / (?=.*[a-z]) / (?=(.*[A-Z])) / (?=(.*))```
+
+# Ranges and Character Classes 
+* Ranges allows you to specify a range of characters by using a hyphen. With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. For our example, it matches a character in the range of numbers 0 through 9, letters a through z lowercase, and letters A through A uppercase. Charatcer classes must be within bracket expressions. If there is a carat (`^`) inside a class or range it will exclude the characters that follow the carat (does not occure in this regex).
+* Examples in our regex: ```[0-9] / [a-z] / [A-Z]```
+
+# Star and Dot
+ * Also referred to as escaped charatcers, these can be used to insert reserved, special, and unicode characters. All escaped characters begin with the \ character. You also escape certain letters that represent common character classes, such as \w for a word character or \s for a space. In this regex it only uses escapes for special characters.
+ * Examples in our regex: `\!` , `\- `, `\\` , `\]`
+ 
+ # Quantifiers
