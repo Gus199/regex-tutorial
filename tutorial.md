@@ -39,5 +39,26 @@ The regex looks like this:
 # Star and Dot
  * Also referred to as escaped charatcers, these can be used to insert reserved, special, and unicode characters. All escaped characters begin with the \ character. You also escape certain letters that represent common character classes, such as \w for a word character or \s for a space. In this regex it only uses escapes for special characters.
  * Examples in our regex: `\!` , `\- `, `\\` , `\]`
- 
+
  # Quantifiers
+* Quantifiers indicate numbers of characters or expressions to match. Since our quantifier has a ( `,` ) after the 8 it means it will match at least that many times instead of exactly 8 which would be the case if it was written without the comma. In this regex it will match at least 8 occurrences of the preceding character which is a dot( `.` ), so any character except for line breaks.
+* Example in our regex: `.{8,}`
+
+# Capturing Groups
+* Capturing Groups are a way to treat multiple characters as a single unit. They are created by placing the characters to be grouped inside a set of parentheses. It allows to get a part of the match as a separate item in the result array. This allows you to apply a quantifier to the entire group.
+* Example in our regex: (`.*[0-9]`) / (`.*[A-Z]`) / (`.*`)
+
+# Examples
+* Will work 
+   * Thiswill1!
+   * 12345aA!
+   * oneTwo*0
+# Anchors
+ 
+(bonus explanation)
+* The ^ and $ meta-characters are anchors that fix a regex match to the beginning (`^`) or ending (`$`) of a line of text.
+* The regex we're covering does not use anchors but includes the characters due to the password container "special characters"
+
+# Author
+
+* If you have any questions, email me at augustine2903a@gmail.com 
